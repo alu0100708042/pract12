@@ -47,10 +47,9 @@ class MatrixDSL < Matrix
                 execute
                 
         end
-        
-        #== Definimos la función de ejecución de la operación
+	# Definimos la función de ejecución del DSL
         def execute
-                
+               
                 # Mostramos las matrices
                 if @matrixA != nil and @matrixB != nil
 
@@ -65,7 +64,7 @@ class MatrixDSL < Matrix
                         puts "Resultado de la operacion ( " + @operacion.to_s + " ): #{resultado}"
 
                 end
-                
+               
         end
 
 end
