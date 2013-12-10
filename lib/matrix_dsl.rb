@@ -25,7 +25,23 @@ class MatrixDSL < Matrix
 
         end
 
-        attr_reader :matrizA, :matrizB
+	       # en option se dirá si son dispersas o densas
+        def option(opcion)
+                @tipoMatrix = opcion                
+        end
+
+        # Se define operand que contendra cara uno de los operandos de la matriz
+        def operand(other)
+                
+                if(@matrixA == nil)
+                        @matrixA = other
+                else
+                        @matrixB = other
+                end
+                             
+                execute
+                
+        end
 
 end
 
