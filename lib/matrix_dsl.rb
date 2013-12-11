@@ -14,7 +14,6 @@ class MatrixDSL < Matrix
 			
 		# El case asignara el operando
 		case @operandoeracion       
-
 			when "suma"
 				@operando= "+"                
 			when "resta"

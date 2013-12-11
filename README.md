@@ -1,16 +1,13 @@
-# Práctica 10 - Implementación de operaciones entre matrices densas y dispersas para la Gema SparseMatrix.
+# Práctica 12 - Implementación de un lenguaje de dominio especifico, (DSL) para el manejo de matrices.
 
 ## Descripción
-Gema que implementa la clase SparseMatrix que contempla el formato de matriz con más de un 60% de ceros. 
-En ella se describen métodos para la realización de operaciones aritméticas, y métodos de comparación. 
-Esos métodos son +(other), -(other), *(other), ==(other), to_s, initialize(h={}). 
-
-La clase SparseMatrix hereda de la clase Matrix, al igual que lo hace DenseMatriz en la cual se implementan las operaciones entre matrices. Esta clase está pensada para su uso con matrices densas.
-En la clase SparseMatrix tambien se implementan los metodos para hacer operaciones con hashes que van a representar a vectores y martrices dispersas.
+Se implementa la clase MatrixDSL la cual hereda de Matrix.
+En ella se describen métodos para la realización de operaciones aritméticas. 
+Esos métodos son la suma (+), la resta (-) y la multiplicación(*).
 
 La jerarquía de clases será la que sigue:
 Matrix clase base.
-DenseMatrix, clase que hereda de Matrix.
+MatrixDSL, clase que hereda de Matrix.
 SparseMatrix, clase que hereda de Matrix.
 SparseVector, clase que es usada por SparseMatrix para crear hashes.
 
@@ -19,7 +16,7 @@ SparseVector, clase que es usada por SparseMatrix para crear hashes.
 
 Añadir esta línea a el Gemfile de la aplicación:
 
-    gem 'SparseMatrix'
+    gem 'MatrixDSL'
 
 Y entonces ejecuta:
 
