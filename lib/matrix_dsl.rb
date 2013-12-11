@@ -1,8 +1,9 @@
-require 'matrix.rb'
-#encoding UTF-8
+# encoding UTF-8
 # Autor: 		Ricardo Oliva García, J. Oliver Martínez Novo
 # Fecha: 		10/12/2013
-# Descripción: 	Implementación de la clase MatrixDSL, para implementar un DSL sobre matrices.
+# Descripción: 	Implementación de la clase MatrixDSL, para representar un DSL sobre matrices.
+
+require 'matrix.rb'
 
 class MatrixDSL < Matrix
 	
@@ -30,17 +31,21 @@ class MatrixDSL < Matrix
 
 	# en option se dirá si son dispersas o densas
 	def option(opcion)
-		@tipoMatrix = opcion                
+	
+		@tipoMatrix = opcion  
+		
 	end
 
 	# Se define operand que contendra cara uno de los operandos de la matriz
 	def operand(other)
+	
 		if(@matrixA == nil)
 			@matrixA = other
 		else
 			@matrixB = other
 		end			 
 		execute
+		
 	end
 		
 	# Definimos la función de ejecución del DSL
